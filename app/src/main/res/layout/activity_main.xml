@@ -10,12 +10,15 @@
         android:id="@+id/pokemonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
+        app:layout_constraintBottom_toTopOf="@id/myPokemon1Image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="46dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/myPokemon1Image"
@@ -23,7 +26,8 @@
         android:layout_height="60dp"
         tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="128dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintBottom_toTopOf="@id/myPokemon2Image"
         app:layout_constraintTop_toBottomOf="@id/pokemonName"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="48dp"
@@ -33,18 +37,20 @@
         android:id="@+id/enemyPokemon1Image"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="120dp"
         app:layout_constraintTop_toBottomOf="@id/pokemonName"
+        app:layout_constraintBottom_toTopOf="@id/enemyPokemon2Image"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/enemyPokemon3Image"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon2Score"
+        app:layout_constraintTop_toBottomOf="@id/enemyPokemon2Image"
         app:layout_constraintStart_toStartOf="@id/enemyPokemon1Image"
+        app:layout_constraintBottom_toTopOf="@id/enemyPokemon4Image"
         tools:layout_editor_absoluteX="290dp"
         tools:layout_editor_absoluteY="210dp"
         tools:srcCompat="@tools:sample/avatars" />
@@ -53,8 +59,9 @@
         android:id="@+id/enemyPokemon4Image"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon3Score"
+        app:layout_constraintTop_toBottomOf="@id/enemyPokemon3Image"
         app:layout_constraintStart_toStartOf="@id/enemyPokemon1Image"
+        app:layout_constraintBottom_toTopOf="@id/enemyPokemon5Image"
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="226dp"
         tools:srcCompat="@tools:sample/avatars" />
@@ -65,25 +72,26 @@
         android:layout_height="60dp"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/enemyPokemon1Image"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon4Score"
+        app:layout_constraintTop_toBottomOf="@id/enemyPokemon4Image"
+        app:layout_constraintBottom_toTopOf="@id/enemyPokemon6Image"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/enemyPokemon6Image"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon5Score"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/enemyPokemon1Image"
-        tools:layout_editor_absoluteX="290dp"
-        tools:layout_editor_absoluteY="564dp"
+        app:layout_constraintTop_toBottomOf="@id/enemyPokemon5Image"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/enemyPokemon2Image"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon1Score"
+        app:layout_constraintTop_toBottomOf="@id/enemyPokemon1Image"
         app:layout_constraintStart_toStartOf="@id/enemyPokemon1Image"
+        app:layout_constraintBottom_toTopOf="@id/enemyPokemon3Image"
         tools:layout_editor_absoluteX="311dp"
         tools:layout_editor_absoluteY="278dp"
         tools:srcCompat="@tools:sample/avatars" />
@@ -93,7 +101,8 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="@id/myPokemon1Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon1Score"
+        app:layout_constraintTop_toBottomOf="@id/myPokemon1Image"
+        app:layout_constraintBottom_toTopOf="@id/myPokemon3Image"
         tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="219dp"
         tools:srcCompat="@tools:sample/avatars" />
@@ -103,7 +112,8 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="@id/myPokemon1Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon2Score"
+        app:layout_constraintTop_toBottomOf="@id/myPokemon2Image"
+        app:layout_constraintBottom_toTopOf="@id/myPokemon4Image"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="350dp"
         tools:srcCompat="@tools:sample/avatars" />
@@ -113,7 +123,8 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="@id/myPokemon1Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon3Score"
+        app:layout_constraintTop_toBottomOf="@id/myPokemon3Image"
+        app:layout_constraintBottom_toTopOf="@id/myPokemon5Image"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="437dp"
         tools:srcCompat="@tools:sample/avatars" />
@@ -123,19 +134,17 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="@id/myPokemon1Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon4Score"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="528dp"
+        app:layout_constraintTop_toBottomOf="@id/myPokemon4Image"
+        app:layout_constraintBottom_toTopOf="@id/myPokemon6Image"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/myPokemon6Image"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/myPokemon1Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon5Score"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="621dp"
+        app:layout_constraintTop_toBottomOf="@id/myPokemon5Image"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -143,8 +152,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@id/myPokemon1Image"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon1Image"
+        app:layout_constraintStart_toStartOf="@id/myPokemon1Name"
+        app:layout_constraintEnd_toEndOf="@id/myPokemon1Name"
         app:layout_constraintTop_toBottomOf="@id/myPokemon1Name"
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="155dp" />
@@ -155,8 +164,8 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintTop_toBottomOf="@id/enemyPokemon1Name"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon1Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon1Image"
+        app:layout_constraintStart_toStartOf="@id/enemyPokemon1Name"
+        app:layout_constraintEnd_toEndOf="@id/enemyPokemon1Name"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="207dp" />
 
@@ -166,8 +175,8 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintTop_toBottomOf="@id/enemyPokemon2Name"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon2Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon2Image"
+        app:layout_constraintStart_toStartOf="@id/enemyPokemon2Name"
+        app:layout_constraintEnd_toEndOf="@id/enemyPokemon2Name"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="207dp" />
 
@@ -177,8 +186,8 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintTop_toBottomOf="@id/enemyPokemon3Name"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon3Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon3Image"
+        app:layout_constraintStart_toStartOf="@id/enemyPokemon3Name"
+        app:layout_constraintEnd_toEndOf="@id/enemyPokemon3Name"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="207dp" />
 
@@ -188,8 +197,8 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintTop_toBottomOf="@id/enemyPokemon4Name"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon4Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon4Image"
+        app:layout_constraintStart_toStartOf="@id/enemyPokemon4Name"
+        app:layout_constraintEnd_toEndOf="@id/enemyPokemon4Name"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="207dp" />
 
@@ -199,9 +208,8 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintTop_toBottomOf="@id/enemyPokemon5Name"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon5Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon5Image"
-        app:layout_constraintBottom_toTopOf="@id/enemyPokemon6Image"
+        app:layout_constraintStart_toStartOf="@id/enemyPokemon5Name"
+        app:layout_constraintEnd_toEndOf="@id/enemyPokemon5Name"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="207dp" />
 
@@ -211,9 +219,8 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintTop_toBottomOf="@id/enemyPokemon6Name"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon6Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon6Image"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/enemyPokemon6Name"
+        app:layout_constraintEnd_toEndOf="@id/enemyPokemon6Name"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="207dp" />
 
@@ -222,8 +229,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@id/myPokemon2Image"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon2Image"
+        app:layout_constraintStart_toStartOf="@id/myPokemon2Name"
+        app:layout_constraintEnd_toEndOf="@id/myPokemon2Name"
         app:layout_constraintTop_toBottomOf="@id/myPokemon2Name"
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="286dp" />
@@ -233,8 +240,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@id/myPokemon3Image"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon3Image"
+        app:layout_constraintStart_toStartOf="@id/myPokemon3Name"
+        app:layout_constraintEnd_toEndOf="@id/myPokemon3Name"
         app:layout_constraintTop_toBottomOf="@id/myPokemon3Name"
         tools:layout_editor_absoluteX="45dp"
         tools:layout_editor_absoluteY="413dp" />
@@ -244,8 +251,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@id/myPokemon4Image"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon4Image"
+        app:layout_constraintStart_toStartOf="@id/myPokemon4Name"
+        app:layout_constraintEnd_toEndOf="@id/myPokemon4Name"
         app:layout_constraintTop_toBottomOf="@id/myPokemon4Name"
         tools:layout_editor_absoluteX="45dp"
         tools:layout_editor_absoluteY="502dp" />
@@ -255,8 +262,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@id/myPokemon5Image"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon5Image"
+        app:layout_constraintStart_toStartOf="@id/myPokemon5Name"
+        app:layout_constraintEnd_toEndOf="@id/myPokemon5Name"
         app:layout_constraintTop_toBottomOf="@id/myPokemon5Name"
         tools:layout_editor_absoluteX="36dp"
         tools:layout_editor_absoluteY="592dp" />
@@ -266,8 +273,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@id/myPokemon6Image"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon6Image"
+        app:layout_constraintStart_toStartOf="@id/myPokemon6Name"
+        app:layout_constraintEnd_toEndOf="@id/myPokemon6Name"
         app:layout_constraintTop_toBottomOf="@id/myPokemon6Name"
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="692dp" />
@@ -279,9 +286,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon1Image"
-        app:layout_constraintStart_toStartOf="@id/myPokemon1Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon1Image" />
+        app:layout_constraintStart_toEndOf="@id/myPokemon1Image"
+        app:layout_constraintTop_toTopOf="@id/myPokemon1Image" />
 
     <EditText
         android:id="@+id/myPokemon2Name"
@@ -290,9 +296,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon2Image"
-        app:layout_constraintStart_toStartOf="@id/myPokemon2Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon2Image" />
+        app:layout_constraintStart_toEndOf="@id/myPokemon2Image"
+        app:layout_constraintTop_toTopOf="@id/myPokemon2Image" />
 
     <EditText
         android:id="@+id/myPokemon3Name"
@@ -301,9 +306,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon3Image"
-        app:layout_constraintStart_toStartOf="@id/myPokemon3Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon3Image" />
+        app:layout_constraintStart_toEndOf="@id/myPokemon3Image"
+        app:layout_constraintTop_toTopOf="@id/myPokemon3Image" />
 
     <EditText
         android:id="@+id/myPokemon4Name"
@@ -312,9 +316,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon4Image"
-        app:layout_constraintStart_toStartOf="@id/myPokemon4Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon4Image" />
+        app:layout_constraintStart_toEndOf="@id/myPokemon4Image"
+        app:layout_constraintTop_toTopOf="@id/myPokemon4Image" />
 
     <EditText
         android:id="@+id/myPokemon5Name"
@@ -323,9 +326,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon5Image"
-        app:layout_constraintStart_toStartOf="@id/myPokemon5Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon5Image" />
+        app:layout_constraintStart_toEndOf="@id/myPokemon5Image"
+        app:layout_constraintTop_toTopOf="@id/myPokemon5Image" />
 
     <EditText
         android:id="@+id/myPokemon6Name"
@@ -334,9 +336,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintEnd_toEndOf="@id/myPokemon6Image"
-        app:layout_constraintStart_toStartOf="@id/myPokemon6Image"
-        app:layout_constraintTop_toBottomOf="@id/myPokemon6Image" />
+        app:layout_constraintStart_toEndOf="@id/myPokemon6Image"
+        app:layout_constraintTop_toTopOf="@id/myPokemon6Image" />
 
     <EditText
         android:id="@+id/enemyPokemon1Name"
@@ -345,11 +346,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon1Image"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon1Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon1Image"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="164dp" />
+        app:layout_constraintStart_toEndOf="@id/enemyPokemon1Image"
+        app:layout_constraintTop_toTopOf="@id/enemyPokemon1Image" />
 
     <EditText
         android:id="@+id/enemyPokemon2Name"
@@ -358,9 +356,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon2Image"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon2Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon2Image"
+        app:layout_constraintTop_toTopOf="@id/enemyPokemon2Image"
+        app:layout_constraintStart_toEndOf="@id/enemyPokemon2Image"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="210dp" />
 
@@ -371,9 +368,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon3Image"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon3Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon3Image"
+        app:layout_constraintTop_toTopOf="@id/enemyPokemon3Image"
+        app:layout_constraintStart_toEndOf="@id/enemyPokemon3Image"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="270dp" />
 
@@ -384,9 +380,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon4Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon4Image"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon4Image"
+        app:layout_constraintStart_toEndOf="@id/enemyPokemon4Image"
+        app:layout_constraintTop_toTopOf="@id/enemyPokemon4Image"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="322dp" />
 
@@ -397,9 +392,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon5Image"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon5Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon5Image"
+        app:layout_constraintTop_toTopOf="@id/enemyPokemon5Image"
+        app:layout_constraintStart_toEndOf="@id/enemyPokemon5Image"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="374dp" />
 
@@ -410,10 +404,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintTop_toBottomOf="@id/enemyPokemon6Image"
-        app:layout_constraintStart_toStartOf="@id/enemyPokemon6Image"
-        app:layout_constraintEnd_toEndOf="@id/enemyPokemon6Image"
-        app:layout_constraintBottom_toTopOf="@id/enemyPokemon6Score"
+        app:layout_constraintTop_toTopOf="@id/enemyPokemon6Image"
+        app:layout_constraintStart_toEndOf="@id/enemyPokemon6Image"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="417dp" />
 
