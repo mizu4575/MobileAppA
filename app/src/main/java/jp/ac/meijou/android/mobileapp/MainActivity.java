@@ -53,9 +53,8 @@ public class MainActivity extends AppCompatActivity {
                         .ifPresent(gistFile -> {
                             // UIスレッド以外で更新するとクラッシュするので、UIスレッド上で実行させる
 
-
                             //Viewに表示するところ。Listでデータを持っているのでうまく切り分けてください......
-                            runOnUiThread(() -> binding.textView.setText(String.valueOf(gistFile.stats.size())));
+                            runOnUiThread(() -> binding.textView.setText(gistFile.stats.get(5).base_stat));
                             //String res = gistFile.stats.toString();
                             //runOnUiThread(() -> binding.textView.setText(res);
                         });
