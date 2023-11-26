@@ -6,20 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/pokemonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@id/myPokemon1Image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
 
     <TextView
@@ -277,7 +264,7 @@
         android:id="@+id/myPokemonButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="手持ち"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/myPokemon6Score"
         app:layout_constraintStart_toStartOf="@id/myPokemon6Name"
@@ -288,7 +275,7 @@
         android:id="@+id/enemyPokemonButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="相手"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/enemyPokemon6Score"
         app:layout_constraintStart_toStartOf="@id/enemyPokemon6Name"
