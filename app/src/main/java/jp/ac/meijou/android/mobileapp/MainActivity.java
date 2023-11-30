@@ -1179,9 +1179,11 @@ public class MainActivity extends AppCompatActivity {
 
 
                             //Viewに表示するところ。Listでデータを持っているのでうまく切り分けてください......
+
                             runOnUiThread(() -> binding.textView.setText(gistFile.stats.get(5).base_stat));
                             //String res = gistFile.stats.get(0).toString();
                             //runOnUiThread(() -> binding.textView.setText(res));
+                          
                         });
             }
         });
