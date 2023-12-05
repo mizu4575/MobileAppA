@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //URLの末尾に図鑑番号を足す
-        Poke_URL += Poke_Number;
+        Poke_URL += pokemon.setPoke_Number(//edittextをうまいこと使ってください);
         ////////////////////////////////////////////////////
 
 
