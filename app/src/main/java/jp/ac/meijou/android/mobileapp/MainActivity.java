@@ -73,41 +73,5 @@ public class MainActivity extends AppCompatActivity {
 
             });
         });
-        /*
-        pokemon mypoke1 = new pokemon(binding.myPokemon1Name.getText().toString(), 1, 0);
-
-        //URLの末尾に図鑑番号を足す
-        Poke_URL += mypoke1.getPoke_Number();
-        ////////////////////////////////////////////////////
-
-        // リクエスト先にgistを指定
-        var request = new Request.Builder()
-                .url(Poke_URL)
-                .build();
-
-        // 非同期通信でリクエスト
-        okHttpClient.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                // 通信に失敗した時に呼ばれる
-            }
-
-            @Override
-            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                // レスポンスボディをGist型に変換
-                var gist = gistJsonAdapter.fromJson(response.body().source());
-                // 中身の取り出し
-                Optional.ofNullable(gist)
-
-                        .ifPresent(gistFile -> {
-                            // UIスレッド以外で更新するとクラッシュするので、UIスレッド上で実行させる
-
-                            runOnUiThread(() -> binding.myPokemon1Score.setText(gistFile.stats.get(5).base_stat));
-                            //String res = gistFile.stats.get(0).toString();
-                            //runOnUiThread(() -> binding.textView.setText(res));
-                          
-                        });
-            }
-        });*/
     }
 }
