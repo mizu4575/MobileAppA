@@ -10,23 +10,7 @@ public class pokemon {
     String Poke_Name; //検索するポケモンの名前を入れる 引数的な
     String Poke_Number; //URLに入れるポケモンの図鑑番号が代入される
 
-    protected String name;
-
-    //一応素早さを定義する変数を作っておきます。必要に応じて削除なり使うなりしてください
-    protected int Agility;
-
-    //1~6体のポケモンに番号を付ける変数
-    protected int suffix;
-    public pokemon(String name,int suffix,int agility){
-        this.name=name;
-        //this.Agility=agility;
-        this.suffix=suffix;
-    }
-
-    public String getString(){
-        return name+suffix;
-    }
-    private void setPoke_List(){
+    private String setPoke_Number(String name){
         String[] Poke_List = { //図鑑番号とポケモンの名前の対応表
                 "1","フシギダネ",
                 "2","フシギソウ",
@@ -1135,15 +1119,21 @@ public class pokemon {
                 "1017","オーガポン",
                 "1","NULL"};//該当なしの時はフシギダネのデータを返す
 
-    }
 
-    //////////////////////////////////////////////////
-    //ポケモンの名前から図鑑番号を呼び出すプログラム
-    int i = 0;
-    while(Poke_Name != Poke_List[i] && Poke_List[i] != "NULL"){
-        i++;
+        //////////////////////////////////////////////////
+        //ポケモンの名前から図鑑番号を呼び出すプログラム
+        int i = 0;
+        while(name != Poke_List[i] && Poke_List[i] != "NULL"){
+            i++;
+        }
+        Poke_Number = Poke_List[i-1];
+        //引数になる変数を定義
+        return Poke_Number;
     }
-    Poke_Number = Poke_List[i-1];
-    //引数になる変数を定義
 
 }
+
+
+
+
+
