@@ -38,15 +38,19 @@ public class MainActivity extends AppCompatActivity {
         binding.myPokemonButton.setOnClickListener(view->{
             var mypoke1_name = binding.myPokemon1Name.getText().toString();
             var mypoke1_url = Poke_URL;
+            //var mypoke2_name = binding.myPokemon2Name.getText().toString();
+            // var mypoke2_url = Poke_URL;
 
             pokemon mypoke1 = new pokemon(mypoke1_name, 1, 0);
             mypoke1_url += mypoke1.getPoke_Number();
+
+            //pokemon mypoke2 = new pokemon(mypoke2_name, 1, 0);
+            //mypoke2_url += mypoke2.getPoke_Number();
 
             // リクエスト先にgistを指定
             var request = new Request.Builder()
                     .url(mypoke1_url)
                     .build();
-
             // 非同期通信でリクエスト
             okHttpClient.newCall(request).enqueue(new Callback() {
                 @Override
@@ -70,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
 
                             });
                 }
-
             });
         });
     }

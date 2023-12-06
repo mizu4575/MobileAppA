@@ -1128,7 +1128,7 @@ public class pokemon {
 
     String getPoke_Number() {
         int i = 0;
-        while(this.name != Poke_List[i] && Poke_List[i] != "NULL"){
+        while(!(this.name.equals(Poke_List[i])) && !(Poke_List[i].equals(null))){
             i++;
         }
         Poke_Number = Poke_List[i-1];
