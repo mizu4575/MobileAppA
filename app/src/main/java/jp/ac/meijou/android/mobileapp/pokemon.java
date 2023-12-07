@@ -1123,7 +1123,7 @@ public class pokemon {
         //////////////////////////////////////////////////
         //ポケモンの名前から図鑑番号を呼び出すプログラム
         int i = 0;
-        while(!(name.equals(Poke_List[i])) && !(Poke_List[i].equals(null))){
+        while(name != Poke_List[i] && Poke_List[i] != "NULL"){
             i++;
         }
         Poke_Number = Poke_List[i-1];
